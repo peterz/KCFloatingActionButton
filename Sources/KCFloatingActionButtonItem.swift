@@ -30,7 +30,11 @@ open class KCFloatingActionButtonItem: UIView {
     /**
      Button color.
      */
-    open var buttonColor: UIColor = UIColor.white
+    open var buttonColor: UIColor = UIColor.white {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
 
     /**
      Title label color.
